@@ -5,7 +5,7 @@ test('No moves allowed after player wins', async ({page}) => {
     await page.goto('http://localhost:3000');
 
 
-    const squares = page.locator('.sqaure')
+    const squares = page.locator('.square')
     const status = page.locator('.status')
 
     //Player X wins
