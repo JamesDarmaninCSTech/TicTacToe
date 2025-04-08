@@ -13,6 +13,6 @@ test('Player X can win the game', async ({ page }) => {
   await squares.nth(4).click();//o
   await squares.nth(2).click();//x Player X wins
 
-  // Check winner
+  //Check winner
   await expect(page.locator('.status')).toHaveText('Winner: X');
 });
