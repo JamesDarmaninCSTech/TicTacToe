@@ -1,4 +1,4 @@
-//Testing Player X Winning horizontally 
+//Testing Player X Winning Diagonal
 import { test, expect } from '@playwright/test';
 
 test('Player X can win the game horizontally', async ({ page }) => {
@@ -8,9 +8,9 @@ test('Player X can win the game horizontally', async ({ page }) => {
 
   await squares.nth(0).click(); // x
   await squares.nth(1).click(); // o
-  await squares.nth(3).click(); // x
+  await squares.nth(4).click(); // x
   await squares.nth(2).click(); // o
-  await squares.nth(6).click(); // x Player X wins horizontal
+  await squares.nth(8).click(); // x Player X wins diagonal
 
   //Check winner
   await expect(page.locator('.status')).toHaveText('Winner: X');
