@@ -16,6 +16,6 @@ test('Game ends in a draw', async ({ page }) => {
   await squares.nth(7).click(); // o
   await squares.nth(8).click(); // x
 
-  // Last player to do there move is X therefore next text is "Next player: O"
+  //Last player to do there move is X therefore next text is "Next player: O"
   await expect(page.locator('.status')).toHaveText('Next player: O');
 });
