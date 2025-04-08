@@ -1,4 +1,4 @@
-//Testing Player O Winning 
+//Testing Player O Winning Veritcally
 import { test, expect } from '@playwright/test';
 
 test('Player O can win the game', async ({ page }) => {
@@ -6,12 +6,12 @@ test('Player O can win the game', async ({ page }) => {
 
   const squares = page.locator('.square');
 
-  await squares.nth(1).click(); // x
-  await squares.nth(0).click(); // o
+  await squares.nth(0).click(); // x
+  await squares.nth(1).click(); // o
   await squares.nth(2).click(); // x
-  await squares.nth(3).click(); // o
+  await squares.nth(4).click(); // o
   await squares.nth(5).click(); // x
-  await squares.nth(6).click(); // o Player O wins
+  await squares.nth(7).click(); // o Player O wins
 
   //Check winner
   await expect(page.locator('.status')).toHaveText('Winner: O');
